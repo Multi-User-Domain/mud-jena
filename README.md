@@ -30,13 +30,26 @@ Contact us if you have any difficulties!
 
 ## Installation
 
-* Install Tomcat 9: https://linuxize.com/post/how-to-install-tomcat-9-on-ubuntu-20-04/ (Ubuntu)
-* Install Eclipse IDE for Java EE developers. http://needhamia.com/?page_id=346
+* Install a Java IDE for web development, e.g. [Eclipse IDE for Java EE developers](https://www.eclipse.org/downloads/packages/release/2021-06/r/eclipse-ide-enterprise-java-and-web-developers)
 * Clone the repository locally
-* Import the project into your Eclipse workspace
-* We use Maven for the install dependencies. You should be able to install the requirements with this
+
+### Import into Eclipse workspace
+
+* File -> Import -> from Git -> General Project
+* Convert to Maven project so that the dependencies from `pom.xml` will be installed
 
 ## Running Tomcat server from Eclipse
+
+The recommended way to run this project is using Docker (see below)
+
+* Click on the servers tab
+* Click create new server
+* Select Apache -> Apache Tomcat 9
+* Install Tomcat 9 if necessary, or select the parent folder of the local install
+* Double click on the server to edit it, switch to the 'modules' tab
+* Add mud-jena as a module and set the path to `/`
+
+### In older versions of Eclipse
 
 * In Eclipse
 * In the Project Explorer, right-click on the MUD project and select Properties
