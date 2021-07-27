@@ -6,7 +6,6 @@ package com.mackervoy.calum.mud.content;
 import com.mackervoy.calum.mud.AbstractMUDController;
 import com.mackervoy.calum.mud.vocabularies.MUDCharacter;
 
-import java.io.StringReader;
 import java.util.Optional;
 
 import javax.ws.rs.POST;
