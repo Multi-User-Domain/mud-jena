@@ -111,4 +111,4 @@ docker run -p 8080:8080 multiuserdomain/mud-jena:<branch-name>
 
 # Contributing
 
-It's early days for now, please get in touch with us directly and we'll help you set up and get involved in the project :-)
+Join our Discord server and say hello! https://discord.gg/sauZA3jCK7
