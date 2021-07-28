@@ -6,6 +6,7 @@ import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.core.Response;
 import org.apache.jena.rdf.model.Model;
+import org.apache.jena.rdf.model.ModelFactory;
 
 /**
  * @author Calum Mackervoy
@@ -22,8 +23,8 @@ public class SceneController extends AbstractMUDController {
 		// TODO: context and social context passed in with the scene
 		Model scene = this.serializeTurtleRequestToModel(requestBody);
 		
-		// TODO: for now we just add a hard-coded character to the scene
-		// ...
+		// for now we just add a hard-coded character to the scene
+		scene = scene.union(ModelFactory.createDefaultModel().read("https://calum.inrupt.net/public/collections/scenedemo.ttl", "TURTLE"));
 		
 		return Response.ok(serializeModelToTurtle(scene)).build();
 	}
