@@ -25,8 +25,8 @@
   <!--MUD Parameters-->
   <context-param>
     <param-name>com.mackervoy.calum.mud.BASE_URL</param-name>
-    <param-value>http://localhost:8080/</param-value>
-    <description>The base URL which the site is deployed to e.g.</description>
+    <param-value>http://localhost:8080/mud/</param-value>
+    <description>The base URL which the site is deployed to</description>
   </context-param>
   
   <context-param>
