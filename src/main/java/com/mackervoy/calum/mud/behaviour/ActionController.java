@@ -4,6 +4,7 @@ import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.ModelFactory;
 import org.apache.jena.rdf.model.Resource;
 import org.apache.jena.vocabulary.RDF;
+import org.apache.jena.vocabulary.RDFS;
 
 import java.util.Set;
 
@@ -43,6 +44,11 @@ public class ActionController extends AbstractMUDController {
 		for(String key : keys) {
 			Model m = ModelFactory.createDefaultModel().read(key, "TURTLE");
 			Resource r = m.getResource(key);
+			String name = r.hasProperty(RDFS.label) ? r.getProperty(RDFS.label, "en").getString() : "";
+			String description = r.hasProperty(RDFS.comment) ? r.getProperty(RDFS.comment, "en").getString() : "";
+			
+			result.add(r, RDFS.label, name);
+			result.add(r, RDFS.comment, description);
 			result.add(r, RDF.type, r.getPropertyResourceValue(RDF.type));
 			result.add(r, MUDLogic.actAt, this.getActAtURL(r));
 		}
