@@ -31,6 +31,7 @@ public class MUDLogic {
     public final static Resource Task = resource( "Task" );
     public final static Resource Transit = resource( "Transit" );
     public final static Property actAt = property( "actAt" );
+    public final static Property parameterConstraintsShape = property("parameterConstraintsShape");
     public final static Property taskImplements = property( "taskImplements" );
     public final static Property isComplete = property( "isComplete" );
     public final static Property endState = property( "endState" );
